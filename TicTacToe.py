@@ -53,6 +53,8 @@ def winning_con_x():
 
     return win_x
 
+
+
 def winning_con_o():
 
     win_o_row_a = [[' ', '|', '1', '|', '2', '|', '3', '|'], ['A', '|', 'O', '|', 'O', '|', 'O', '|'],
@@ -86,10 +88,10 @@ def winning_con_o():
 
 
 
-
 def play(n1, n2):
     used_spots = []
     print(f'{n1}, place "X" on the board.')
+    flag = 0
     row = input('Row: ')
     row = row.capitalize()
     column = int(input('Column: '))
@@ -103,6 +105,10 @@ def play(n1, n2):
 
     used_spots.append((row, column))
     board[row][column+column] = 'X'
+    x_current_board = []
+    x_current_board.append((row, column))
+    print(x_current_board)
+
 
 
 
