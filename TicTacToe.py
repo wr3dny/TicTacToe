@@ -1,10 +1,6 @@
 # Implementacja gry kółko i krzyżyk
 #
-# Opis:
-#
-# Stwórz gre w kółko i Krzyżyk dla 2 graczy. Zacznij od najważniejszej części – rozgrywki, a następnie dodaj menu,
-# opcje takie jak imiona graczy, pomysły własne.
-#
+
 board = [[' ', '|', '1', '|', '2', '|', '3', '|'], ['A', '|', '.', '|', '.', '|', '.', '|'],
          ['B', '|', '.', '|', '.', '|', '.', '|'], ['C', '|', '.', '|', '.', '|', '.', '|']]
 
@@ -52,6 +48,11 @@ def winning_con_x():
             win_x_diagonal_1 + win_x_diagonal_2
 
     return win_x
+
+
+def winning_condition_second(name1):
+    if (board[1][3] and board[1][5] and board[1][7]) == 'X':
+        print(f'Player {name1}')
 
 
 
