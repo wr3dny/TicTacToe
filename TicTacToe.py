@@ -18,75 +18,42 @@ def board_display(name1, name2):
         print(*b)
 
 
-def winning_con_x():
 
-    win_x_row_a = [[' ', '|', '1', '|', '2', '|', '3', '|'], ['A', '|', 'X', '|', 'X', '|', 'X', '|'],
-             ['B', '|', '.', '|', '.', '|', '.', '|'], ['C', '|', '.', '|', '.', '|', '.', '|']]
-
-    win_x_row_b = [[' ', '|', '1', '|', '2', '|', '3', '|'], ['A', '|', '.', '|', '.', '|', '.', '|'],
-             ['B', '|', 'X', '|', 'X', '|', 'X', '|'], ['C', '|', '.', '|', '.', '|', '.', '|']]
-
-    win_x_row_c = [[' ', '|', '1', '|', '2', '|', '3', '|'], ['A', '|', '.', '|', '.', '|', '.', '|'],
-             ['B', '|', '.', '|', '.', '|', '.', '|'], ['C', '|', 'X', '|', 'X', '|', 'X', '|']]
-
-    win_x_column_1 = [[' ', '|', '1', '|', '2', '|', '3', '|'], ['A', '|', 'X', '|', '.', '|', '.', '|'],
-             ['B', '|', 'X', '|', '.', '|', '.', '|'], ['C', '|', 'X', '|', '.', '|', '.', '|']]
-
-    win_x_column_2 = [[' ', '|', '1', '|', '2', '|', '3', '|'], ['A', '|', '.', '|', 'X', '|', '.', '|'],
-             ['B', '|', '.', '|', 'X', '|', '.', '|'], ['C', '|', '.', '|', 'X', '|', '.', '|']]
-
-    win_x_column_3 = [[' ', '|', '1', '|', '2', '|', '3', '|'], ['A', '|', '.', '|', '.', '|', 'X', '|'],
-             ['B', '|', '.', '|', '.', '|', 'X', '|'], ['C', '|', '.', '|', '.', '|', 'X', '|']]
-
-    win_x_diagonal_1 = [[' ', '|', '1', '|', '2', '|', '3', '|'], ['A', '|', 'X', '|', '.', '|', '.', '|'],
-             ['B', '|', '.', '|', 'X', '|', '.', '|'], ['C', '|', '.', '|', '.', '|', 'X', '|']]
-
-    win_x_diagonal_2 = [[' ', '|', '1', '|', '2', '|', '3', '|'], ['A', '|', '.', '|', '.', '|', 'X', '|'],
-             ['B', '|', '.', '|', 'X', '|', '.', '|'], ['C', '|', 'X', '|', '.', '|', '.', '|']]
-
-    win_x = win_x_row_a + win_x_row_b + win_x_row_c + win_x_column_1 + win_x_column_2 + win_x_column_3 +\
-            win_x_diagonal_1 + win_x_diagonal_2
-
-    return win_x
-
-
-def winning_condition_second(name1):
-    if (board[1][3] and board[1][5] and board[1][7]) == 'X':
-        print(f'Player {name1}')
-
-
-
-def winning_con_o():
-
-    win_o_row_a = [[' ', '|', '1', '|', '2', '|', '3', '|'], ['A', '|', 'O', '|', 'O', '|', 'O', '|'],
-                   ['B', '|', '.', '|', '.', '|', '.', '|'], ['C', '|', '.', '|', '.', '|', '.', '|']]
-
-    win_o_row_b = [[' ', '|', '1', '|', '2', '|', '3', '|'], ['A', '|', '.', '|', '.', '|', '.', '|'],
-                   ['B', '|', 'O', '|', 'O', '|', 'O', '|'], ['C', '|', '.', '|', '.', '|', '.', '|']]
-
-    win_o_row_c = [[' ', '|', '1', '|', '2', '|', '3', '|'], ['A', '|', '.', '|', '.', '|', '.', '|'],
-                   ['B', '|', '.', '|', '.', '|', '.', '|'], ['C', '|', 'O', '|', 'O', '|', 'O', '|']]
-
-    win_o_column_1 = [[' ', '|', '1', '|', '2', '|', '3', '|'], ['A', '|', 'O', '|', '.', '|', '.', '|'],
-                      ['B', '|', 'O', '|', '.', '|', '.', '|'], ['C', '|', 'O', '|', '.', '|', '.', '|']]
-
-    win_o_column_2 = [[' ', '|', '1', '|', '2', '|', '3', '|'], ['A', '|', '.', '|', 'O', '|', '.', '|'],
-                      ['B', '|', '.', '|', 'O', '|', '.', '|'], ['C', '|', '.', '|', 'O', '|', '.', '|']]
-
-    win_o_column_3 = [[' ', '|', '1', '|', '2', '|', '3', '|'], ['A', '|', '.', '|', '.', '|', 'O', '|'],
-                      ['B', '|', '.', '|', '.', '|', 'O', '|'], ['C', '|', '.', '|', '.', '|', 'O', '|']]
-
-    win_o_diagonal_1 = [[' ', '|', '1', '|', '2', '|', '3', '|'], ['A', '|', 'O', '|', '.', '|', '.', '|'],
-                        ['B', '|', '.', '|', 'O', '|', '.', '|'], ['C', '|', '.', '|', '.', '|', 'O', '|']]
-
-    win_o_diagonal_2 = [[' ', '|', '1', '|', '2', '|', '3', '|'], ['A', '|', '.', '|', '.', '|', 'O', '|'],
-                        ['B', '|', '.', '|', 'O', '|', '.', '|'], ['C', '|', 'O', '|', '.', '|', '.', '|']]
-
-    win_o = win_o_row_a + win_o_row_b + win_o_row_c + win_o_column_1 + win_o_column_2 + win_o_column_3 + \
-            win_o_diagonal_1 + win_o_diagonal_2
-
-    return win_o
-
+def winning_condition(name1, name2):
+    if (board[1][3] and board[1][5] and board[1][7]) == 'X':  # row A
+        print(f'Player {name1} won')
+    elif (board[2][3] and board[2][5] and board[2][7]) == 'X':  # row B
+        print(f'Player {name1} won')
+    elif (board[3][3] and board[3][5] and board[3][7]) == 'X':  # row C
+        print(f'Player {name1} won')
+    elif (board[1][3] and board[2][3] and board[3][3]) == 'X':  # column 1
+        print(f'Player {name1} won')
+    elif (board[1][5] and board[2][5] and board[3][5]) == 'X':  # column 2
+        print(f'Player {name1} won')
+    elif (board[1][7] and board[2][7] and board[3][7]) == 'X':  # column 3
+        print(f'Player {name1} won')
+    elif (board[1][3] and board[2][5] and board[3][7]) == 'X':  # diagonal 1
+        print(f'Player {name1} won')
+    elif (board[1][7] and board[2][5] and board[3][3]) == 'X':  # diagonal 2
+        print(f'Player {name1} won')
+    elif (board[1][3] and board[1][5] and board[1][7]) == 'O':  # row A
+        print(f'Player {name2} won')
+    elif (board[2][3] and board[2][5] and board[2][7]) == 'O':  # row B
+        print(f'Player {name2} won')
+    elif (board[3][3] and board[3][5] and board[3][7]) == 'O':  # row C
+        print(f'Player {name2} won')
+    elif (board[1][3] and board[2][3] and board[3][3]) == 'O':  # column 1
+        print(f'Player {name2} won')
+    elif (board[1][5] and board[2][5] and board[3][5]) == 'O':  # column 2
+        print(f'Player {name2} won')
+    elif (board[1][7] and board[2][7] and board[3][7]) == 'O':  # column 3
+        print(f'Player {name2} won')
+    elif (board[1][3] and board[2][5] and board[3][7]) == 'O':  # diagonal 1
+        print(f'Player {name2} won')
+    elif (board[1][7] and board[2][5] and board[3][3]) == 'O':  # diagonal 2
+        print(f'Player {name2} won')
+    else:
+        print('No winner')
 
 
 def play(n1, n2):
