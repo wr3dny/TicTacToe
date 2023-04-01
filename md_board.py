@@ -13,3 +13,4 @@ def board_display(name1, name2, board):
     print(' ')
     for b in board:
         print(*b)
+

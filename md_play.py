@@ -30,7 +30,7 @@ def play(player, symbol, bd):
             print('Invalid input. Please try again.')
 
     bd[row][column + column] = symbol
-    # board_display('Player 1', 'Player 2', board)
+
     return bd
 
 
