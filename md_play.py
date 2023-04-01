@@ -1,14 +1,7 @@
 from md_board import board, board_display
 
 
-def play(player, bd):
-    symbol1 = 'X'
-    symbol2 = 'O'
-
-    if player == name_1:
-        symbol = symbol1
-    else:
-        symbol = symbol2
+def play(player, symbol, bd):
     print(f'{player}, place {symbol} on the board.')
     flag_row = False
     flag_column = False
@@ -37,8 +30,7 @@ def play(player, bd):
             print('Invalid input. Please try again.')
 
     bd[row][column + column] = symbol
-    board_display('Player 1', 'Player 2', board)
+    # board_display('Player 1', 'Player 2', board)
     return bd
 
 
-play('Player 1', board)
