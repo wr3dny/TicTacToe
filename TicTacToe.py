@@ -2,16 +2,20 @@
 from md_board import board, board_display
 from md_play import play
 from md_win import winning_condition
+from md_win2 import winning
 
 
 def main():
     name_1 = input('Player 1 name: ')
     name_2 = input('Player 2 name: ')
     print()
-    while not winning_condition(name_1, name_2, board):
+    winner = winning()
+
+    while winner != 'won':
         symbol = 'X'
         board_new = play(name_1, symbol, board)
         board_display(name_1, name_2, board_new)
+
         print()
         symbol = 'O'
         board_new = play(name_2, symbol, board)
@@ -20,7 +24,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-
-
