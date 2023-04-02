@@ -1,38 +1,23 @@
 # winning table
 
-def winning_condition(name1, name2, current_board):
-    if (current_board[1][2] and current_board[1][4] and current_board[1][6]) == 'X':  # row A
-        print(f'Player {name1} won')
-    elif (current_board[2][2] and current_board[2][4] and current_board[2][6]) == 'X':  # row B
-        print(f'Player {name1} won')
-    elif (current_board[3][2] and current_board[3][4] and current_board[3][6]) == 'X':  # row C
-        print(f'Player {name1} won')
-    elif (current_board[1][2] and current_board[2][2] and current_board[3][2]) == 'X':  # column 1
-        print(f'Player {name1} won')
-    elif (current_board[1][4] and current_board[2][4] and current_board[3][4]) == 'X':  # column 2
-        print(f'Player {name1} won')
-    elif (current_board[1][6] and current_board[2][6] and current_board[3][6]) == 'X':  # column 3
-        print(f'Player {name1} won')
-    elif (current_board[1][2] and current_board[2][4] and current_board[3][6]) == 'X':  # diagonal 1
-        print(f'Player {name1} won')
-    elif (current_board[1][6] and current_board[2][4] and current_board[3][2]) == 'X':  # diagonal 2
-        print(f'Player {name1} won')
-    # elif (current_board[1][2] and current_board[1][4] and current_board[1][6]) == 'O':  # row A
-    #     print(f'Player {name2} won')
-    # elif (current_board[2][2] and current_board[2][4] and current_board[2][6]) == 'O':  # row B
-    #     print(f'Player {name2} won')
-    # elif (current_board[3][2] and current_board[3][4] and current_board[3][6]) == 'O':  # row C
-    #     print(f'Player {name2} won')
-    # elif (current_board[1][2] and current_board[2][2] and current_board[3][2]) == 'O':  # column 1
-    #     print(f'Player {name2} won')
-    # elif (current_board[1][4] and current_board[2][4] and current_board[3][4]) == 'O':  # column 2
-    #     print(f'Player {name2} won')
-    # elif (current_board[1][6] and current_board[2][6] and current_board[3][6]) == 'O':  # column 3
-    #     print(f'Player {name2} won')
-    # elif (current_board[1][2] and current_board[2][4] and current_board[3][6]) == 'O':  # diagonal 1
-    #     print(f'Player {name2} won')
-    # elif (current_board[1][6] and current_board[2][4] and current_board[3][2]) == 'O':  # diagonal 2
-    #     print(f'Player {name2} won')
+def winning_condition(symb, current_board):
+    if (current_board[1][2] and current_board[1][4] and current_board[1][6]) == symb:  # row A
+        answer = 'won'
+    elif (current_board[2][2] and current_board[2][4] and current_board[2][6]) == symb:  # row B
+        answer = 'won'
+    elif (current_board[3][2] and current_board[3][4] and current_board[3][6]) == symb:  # row C
+        answer = 'won'
+    elif (current_board[1][2] and current_board[2][2] and current_board[3][2]) == symb:  # column 1
+        answer = 'won'
+    elif (current_board[1][4] and current_board[2][4] and current_board[3][4]) == symb:  # column 2
+        answer = 'won'
+    elif (current_board[1][6] and current_board[2][6] and current_board[3][6]) == symb:  # column 3
+        answer = 'won'
+    elif (current_board[1][2] and current_board[2][4] and current_board[3][6]) == symb:  # diagonal 1
+        answer = 'won'
+    elif (current_board[1][6] and current_board[2][4] and current_board[3][2]) == symb:  # diagonal 2
+        answer = 'won'
     else:
-        print('No winner')
-        print()
+        answer = 'no winner'
+
+    return answer
