@@ -4,7 +4,6 @@ from md_play import play
 from md_win import winning_condition
 
 
-
 def main():
     name_1 = input('Player 1 name: ')
     name_2 = input('Player 2 name: ')
