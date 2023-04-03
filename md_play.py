@@ -10,17 +10,19 @@ def play(player, symbol, bd):
         row = input('Row: ')
         row = row.capitalize()
         if row == 'A' or row == 'B' or row == 'C':
+
+            match row:
+                case 'A':
+                    row = 1
+                case 'B':
+                    row = 2
+                case 'C':
+                    row = 3
+
             flag_row = True
+
         else:
             print('Invalid input. Please try again.')
-
-        match row:
-            case 'A':
-                row = 1
-            case 'B':
-                row = 2
-            case 'C':
-                row = 3
 
     while not flag_column:
         column = int(input('Column: '))
@@ -29,9 +31,14 @@ def play(player, symbol, bd):
         else:
             print('Invalid input. Please try again.')
 
-    bd[row][column + column] = symbol
+    if bd[row][column + column] == '.':
+        bd[row][column + column] = symbol
+    else:
+        print('This place is already taken. Please try again.')
+        play(player, symbol, bd)
 
     return bd
+
 
 
 

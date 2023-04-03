@@ -18,22 +18,18 @@ def main():
         symbol = 'X'
         board_new = play(name_1, symbol, board)
         board_display(name_1, name_2, board_new)
-        winner = winning_condition(symbol, board_new)
+        winner = winning_condition(board_new)
         if winner == 'won':
-            print(f'{name_1} won!')
+            print(f'{name_1} has won!')
             break
 
         symbol = 'O'
         board_new = play(name_2, symbol, board)
         board_display(name_1, name_2, board_new)
-        winner = winning_condition(symbol, board_new)
+        winner = winning_condition(board_new)
         if winner == 'won':
-            print(f'{name_2} won!')
+            print(f'{name_2} has won!')
             break
-
-
-
-
 
 
 if __name__ == '__main__':
