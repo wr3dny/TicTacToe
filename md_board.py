@@ -6,6 +6,7 @@ board = [[' ', ' ', '1', ' ', '2', ' ', '3', ' '], ['A', '|', '.', '|', '.', '|'
 
 def board_display(name1, name2, board_entered):
     cl = max(len(name1), len(name2))
+    print()
     print(f'{name1 : ^{cl}} -  playing X')
     vs = 'vs'
     print(vs.center(cl))
